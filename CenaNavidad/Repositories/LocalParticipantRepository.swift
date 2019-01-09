@@ -68,10 +68,6 @@ class LocalParticipantRepository: Repository {
         return true
     }
     
-    func update(a: Participant) -> Bool {
-        return create(a:a)
-    }
-    
     func delete(a: Participant) -> Bool {
         do{
             let realm = try Realm()
@@ -86,5 +82,7 @@ class LocalParticipantRepository: Repository {
         return true
     }
     
-    
+    func update(a: Participant) -> Bool {
+        return create(a:a)
+    }
 }
