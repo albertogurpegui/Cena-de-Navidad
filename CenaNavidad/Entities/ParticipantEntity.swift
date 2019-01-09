@@ -2,19 +2,19 @@
 //  ParticipantEntitie.swift
 //  CenaNavidad
 //
-//  Created by David gimenez on 6/1/19.
-//  Copyright © 2019 David gimenez. All rights reserved.
+//  Created by Alberto gurpegui on 3/1/19.
+//  Copyright © 2019 Alberto gurpegui. All rights reserved.
 //
 
 import UIKit
 import RealmSwift
 
-class ParticipantEntitie: Object {
+class ParticipantEntity: Object {
     
     @objc dynamic var id = ""
     @objc dynamic var name = ""
-    @objc dynamic var creationDate = Date()
     @objc dynamic var isPaid = false
+    @objc dynamic var creationDate = Date()
     
     
     override static func primaryKey() -> String?{
@@ -25,16 +25,16 @@ class ParticipantEntitie: Object {
         self.init()
         self.id = participant.id
         self.name = participant.name
-        self.creationDate = participant.creationDate
         self.isPaid = participant.isPaid
+        self.creationDate = participant.creationDate
     }
     
     func participantModel() -> Participant {
         let model = Participant()
         model.id = id
         model.name = name
-        model.creationDate = creationDate
         model.isPaid = isPaid
+        model.creationDate = creationDate
         return model
     }
 
