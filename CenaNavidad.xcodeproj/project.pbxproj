@@ -1,0 +1,812 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		34787B6A21E260DA00BC1F48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34787B6921E260DA00BC1F48 /* AppDelegate.swift */; };
+		34787B7121E260DB00BC1F48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34787B7021E260DB00BC1F48 /* Assets.xcassets */; };
+		34787B7421E260DB00BC1F48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34787B7221E260DB00BC1F48 /* LaunchScreen.storyboard */; };
+		34787B7F21E260DB00BC1F48 /* CenaNavidadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34787B7E21E260DB00BC1F48 /* CenaNavidadTests.swift */; };
+		34787B8A21E260DB00BC1F48 /* CenaNavidadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34787B8921E260DB00BC1F48 /* CenaNavidadUITests.swift */; };
+		34787B9B21E261C300BC1F48 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34787B9921E261C300BC1F48 /* MainViewController.xib */; };
+		34787B9C21E261C300BC1F48 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34787B9A21E261C300BC1F48 /* MainViewController.swift */; };
+		34787BA321E268F900BC1F48 /* ParticipantEntitie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34787BA221E268F900BC1F48 /* ParticipantEntitie.swift */; };
+		34787BA621E2696A00BC1F48 /* Participant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34787BA521E2696A00BC1F48 /* Participant.swift */; };
+		34787BA921E26B8D00BC1F48 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34787BA821E26B8D00BC1F48 /* Repository.swift */; };
+		34787BAF21E26CD300BC1F48 /* LocalParticipantRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34787BAE21E26CD300BC1F48 /* LocalParticipantRepository.swift */; };
+		34787BB321E2712500BC1F48 /* AddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34787BB121E2712500BC1F48 /* AddViewController.xib */; };
+		34787BB421E2712500BC1F48 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34787BB221E2712500BC1F48 /* AddViewController.swift */; };
+		34787BB821E275E700BC1F48 /* ParticipantTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34787BB621E275E700BC1F48 /* ParticipantTableViewCell.xib */; };
+		34787BB921E275E700BC1F48 /* ParticipantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34787BB721E275E700BC1F48 /* ParticipantTableViewCell.swift */; };
+		34787BBD21E2989400BC1F48 /* UpdateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34787BBB21E2989400BC1F48 /* UpdateViewController.xib */; };
+		34787BBE21E2989400BC1F48 /* UpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34787BBC21E2989400BC1F48 /* UpdateViewController.swift */; };
+		7C31FC8FB3F32529D15D2534 /* Pods_CenaNavidadUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7489ACA31BA390D4F438EF95 /* Pods_CenaNavidadUITests.framework */; };
+		B36FB11865A2DA66189DF211 /* Pods_CenaNavidad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F03258A4E14B628B6810C26 /* Pods_CenaNavidad.framework */; };
+		C807E381D3D3B5BF8D44DD6C /* Pods_CenaNavidadTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 537B4E5DDBA0ABF211AD3FC4 /* Pods_CenaNavidadTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		34787B7B21E260DB00BC1F48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34787B5E21E260DA00BC1F48 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 34787B6521E260DA00BC1F48;
+			remoteInfo = CenaNavidad;
+		};
+		34787B8621E260DB00BC1F48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34787B5E21E260DA00BC1F48 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 34787B6521E260DA00BC1F48;
+			remoteInfo = CenaNavidad;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2C6A44741CEDF9555A22AA87 /* Pods-CenaNavidad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CenaNavidad.release.xcconfig"; path = "Pods/Target Support Files/Pods-CenaNavidad/Pods-CenaNavidad.release.xcconfig"; sourceTree = "<group>"; };
+		34787B6621E260DA00BC1F48 /* CenaNavidad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CenaNavidad.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		34787B6921E260DA00BC1F48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		34787B7021E260DB00BC1F48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		34787B7321E260DB00BC1F48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		34787B7521E260DB00BC1F48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34787B7A21E260DB00BC1F48 /* CenaNavidadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CenaNavidadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		34787B7E21E260DB00BC1F48 /* CenaNavidadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenaNavidadTests.swift; sourceTree = "<group>"; };
+		34787B8021E260DB00BC1F48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34787B8521E260DB00BC1F48 /* CenaNavidadUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CenaNavidadUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		34787B8921E260DB00BC1F48 /* CenaNavidadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenaNavidadUITests.swift; sourceTree = "<group>"; };
+		34787B8B21E260DB00BC1F48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34787B9921E261C300BC1F48 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		34787B9A21E261C300BC1F48 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		34787BA221E268F900BC1F48 /* ParticipantEntitie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantEntitie.swift; sourceTree = "<group>"; };
+		34787BA521E2696A00BC1F48 /* Participant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Participant.swift; sourceTree = "<group>"; };
+		34787BA821E26B8D00BC1F48 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		34787BAE21E26CD300BC1F48 /* LocalParticipantRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalParticipantRepository.swift; sourceTree = "<group>"; };
+		34787BB121E2712500BC1F48 /* AddViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddViewController.xib; sourceTree = "<group>"; };
+		34787BB221E2712500BC1F48 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		34787BB621E275E700BC1F48 /* ParticipantTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParticipantTableViewCell.xib; sourceTree = "<group>"; };
+		34787BB721E275E700BC1F48 /* ParticipantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantTableViewCell.swift; sourceTree = "<group>"; };
+		34787BBB21E2989400BC1F48 /* UpdateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateViewController.xib; sourceTree = "<group>"; };
+		34787BBC21E2989400BC1F48 /* UpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateViewController.swift; sourceTree = "<group>"; };
+		537B4E5DDBA0ABF211AD3FC4 /* Pods_CenaNavidadTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CenaNavidadTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		57BF2314D8EF2DCDAC1837CB /* Pods-CenaNavidadUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CenaNavidadUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CenaNavidadUITests/Pods-CenaNavidadUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7489ACA31BA390D4F438EF95 /* Pods_CenaNavidadUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CenaNavidadUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		791CA64B00D0F5D97834CBE1 /* Pods-CenaNavidad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CenaNavidad.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CenaNavidad/Pods-CenaNavidad.debug.xcconfig"; sourceTree = "<group>"; };
+		7F03258A4E14B628B6810C26 /* Pods_CenaNavidad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CenaNavidad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC95474D392D47BD79B298AF /* Pods-CenaNavidadTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CenaNavidadTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CenaNavidadTests/Pods-CenaNavidadTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BDB3AAD4F253495A4F5860FB /* Pods-CenaNavidadTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CenaNavidadTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CenaNavidadTests/Pods-CenaNavidadTests.release.xcconfig"; sourceTree = "<group>"; };
+		D3548525BB80756D20CCECA4 /* Pods-CenaNavidadUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CenaNavidadUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CenaNavidadUITests/Pods-CenaNavidadUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		34787B6321E260DA00BC1F48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B36FB11865A2DA66189DF211 /* Pods_CenaNavidad.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34787B7721E260DB00BC1F48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C807E381D3D3B5BF8D44DD6C /* Pods_CenaNavidadTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34787B8221E260DB00BC1F48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C31FC8FB3F32529D15D2534 /* Pods_CenaNavidadUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		34787B5D21E260DA00BC1F48 = {
+			isa = PBXGroup;
+			children = (
+				34787B6821E260DA00BC1F48 /* CenaNavidad */,
+				34787B7D21E260DB00BC1F48 /* CenaNavidadTests */,
+				34787B8821E260DB00BC1F48 /* CenaNavidadUITests */,
+				34787B6721E260DA00BC1F48 /* Products */,
+				C10A5A1855685113FBC3C384 /* Pods */,
+				CA69AB2F55589D2EBA54FFB6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		34787B6721E260DA00BC1F48 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				34787B6621E260DA00BC1F48 /* CenaNavidad.app */,
+				34787B7A21E260DB00BC1F48 /* CenaNavidadTests.xctest */,
+				34787B8521E260DB00BC1F48 /* CenaNavidadUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		34787B6821E260DA00BC1F48 /* CenaNavidad */ = {
+			isa = PBXGroup;
+			children = (
+				34787BB521E275C300BC1F48 /* Cells */,
+				34787BA721E26B5600BC1F48 /* Repositories */,
+				34787BA421E2695000BC1F48 /* Models */,
+				34787B9D21E2685400BC1F48 /* Entities */,
+				34787B9721E2617700BC1F48 /* ViewControllers */,
+				34787B6921E260DA00BC1F48 /* AppDelegate.swift */,
+				34787B7021E260DB00BC1F48 /* Assets.xcassets */,
+				34787B7221E260DB00BC1F48 /* LaunchScreen.storyboard */,
+				34787B7521E260DB00BC1F48 /* Info.plist */,
+			);
+			path = CenaNavidad;
+			sourceTree = "<group>";
+		};
+		34787B7D21E260DB00BC1F48 /* CenaNavidadTests */ = {
+			isa = PBXGroup;
+			children = (
+				34787B7E21E260DB00BC1F48 /* CenaNavidadTests.swift */,
+				34787B8021E260DB00BC1F48 /* Info.plist */,
+			);
+			path = CenaNavidadTests;
+			sourceTree = "<group>";
+		};
+		34787B8821E260DB00BC1F48 /* CenaNavidadUITests */ = {
+			isa = PBXGroup;
+			children = (
+				34787B8921E260DB00BC1F48 /* CenaNavidadUITests.swift */,
+				34787B8B21E260DB00BC1F48 /* Info.plist */,
+			);
+			path = CenaNavidadUITests;
+			sourceTree = "<group>";
+		};
+		34787B9721E2617700BC1F48 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				34787BBA21E2986E00BC1F48 /* UpdateViewController */,
+				34787BB021E270FC00BC1F48 /* AddViewController */,
+				34787B9821E261A100BC1F48 /* MainViewController */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		34787B9821E261A100BC1F48 /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				34787B9921E261C300BC1F48 /* MainViewController.xib */,
+				34787B9A21E261C300BC1F48 /* MainViewController.swift */,
+			);
+			path = MainViewController;
+			sourceTree = "<group>";
+		};
+		34787B9D21E2685400BC1F48 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				34787BA221E268F900BC1F48 /* ParticipantEntitie.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		34787BA421E2695000BC1F48 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				34787BA521E2696A00BC1F48 /* Participant.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		34787BA721E26B5600BC1F48 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				34787BA821E26B8D00BC1F48 /* Repository.swift */,
+				34787BAE21E26CD300BC1F48 /* LocalParticipantRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		34787BB021E270FC00BC1F48 /* AddViewController */ = {
+			isa = PBXGroup;
+			children = (
+				34787BB121E2712500BC1F48 /* AddViewController.xib */,
+				34787BB221E2712500BC1F48 /* AddViewController.swift */,
+			);
+			path = AddViewController;
+			sourceTree = "<group>";
+		};
+		34787BB521E275C300BC1F48 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				34787BB621E275E700BC1F48 /* ParticipantTableViewCell.xib */,
+				34787BB721E275E700BC1F48 /* ParticipantTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		34787BBA21E2986E00BC1F48 /* UpdateViewController */ = {
+			isa = PBXGroup;
+			children = (
+				34787BBB21E2989400BC1F48 /* UpdateViewController.xib */,
+				34787BBC21E2989400BC1F48 /* UpdateViewController.swift */,
+			);
+			path = UpdateViewController;
+			sourceTree = "<group>";
+		};
+		C10A5A1855685113FBC3C384 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				791CA64B00D0F5D97834CBE1 /* Pods-CenaNavidad.debug.xcconfig */,
+				2C6A44741CEDF9555A22AA87 /* Pods-CenaNavidad.release.xcconfig */,
+				AC95474D392D47BD79B298AF /* Pods-CenaNavidadTests.debug.xcconfig */,
+				BDB3AAD4F253495A4F5860FB /* Pods-CenaNavidadTests.release.xcconfig */,
+				57BF2314D8EF2DCDAC1837CB /* Pods-CenaNavidadUITests.debug.xcconfig */,
+				D3548525BB80756D20CCECA4 /* Pods-CenaNavidadUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CA69AB2F55589D2EBA54FFB6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7F03258A4E14B628B6810C26 /* Pods_CenaNavidad.framework */,
+				537B4E5DDBA0ABF211AD3FC4 /* Pods_CenaNavidadTests.framework */,
+				7489ACA31BA390D4F438EF95 /* Pods_CenaNavidadUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		34787B6521E260DA00BC1F48 /* CenaNavidad */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34787B8E21E260DB00BC1F48 /* Build configuration list for PBXNativeTarget "CenaNavidad" */;
+			buildPhases = (
+				3901D9294EFE7D9737935C7D /* [CP] Check Pods Manifest.lock */,
+				34787B6221E260DA00BC1F48 /* Sources */,
+				34787B6321E260DA00BC1F48 /* Frameworks */,
+				34787B6421E260DA00BC1F48 /* Resources */,
+				85B5CF70F41961D11615ACDC /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CenaNavidad;
+			productName = CenaNavidad;
+			productReference = 34787B6621E260DA00BC1F48 /* CenaNavidad.app */;
+			productType = "com.apple.product-type.application";
+		};
+		34787B7921E260DB00BC1F48 /* CenaNavidadTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34787B9121E260DB00BC1F48 /* Build configuration list for PBXNativeTarget "CenaNavidadTests" */;
+			buildPhases = (
+				C668F6A814F18167B63F5949 /* [CP] Check Pods Manifest.lock */,
+				34787B7621E260DB00BC1F48 /* Sources */,
+				34787B7721E260DB00BC1F48 /* Frameworks */,
+				34787B7821E260DB00BC1F48 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				34787B7C21E260DB00BC1F48 /* PBXTargetDependency */,
+			);
+			name = CenaNavidadTests;
+			productName = CenaNavidadTests;
+			productReference = 34787B7A21E260DB00BC1F48 /* CenaNavidadTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		34787B8421E260DB00BC1F48 /* CenaNavidadUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34787B9421E260DB00BC1F48 /* Build configuration list for PBXNativeTarget "CenaNavidadUITests" */;
+			buildPhases = (
+				ECA670E91014ABF5AEF2BDB8 /* [CP] Check Pods Manifest.lock */,
+				34787B8121E260DB00BC1F48 /* Sources */,
+				34787B8221E260DB00BC1F48 /* Frameworks */,
+				34787B8321E260DB00BC1F48 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				34787B8721E260DB00BC1F48 /* PBXTargetDependency */,
+			);
+			name = CenaNavidadUITests;
+			productName = CenaNavidadUITests;
+			productReference = 34787B8521E260DB00BC1F48 /* CenaNavidadUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		34787B5E21E260DA00BC1F48 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "David gimenez";
+				TargetAttributes = {
+					34787B6521E260DA00BC1F48 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					34787B7921E260DB00BC1F48 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 34787B6521E260DA00BC1F48;
+					};
+					34787B8421E260DB00BC1F48 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 34787B6521E260DA00BC1F48;
+					};
+				};
+			};
+			buildConfigurationList = 34787B6121E260DA00BC1F48 /* Build configuration list for PBXProject "CenaNavidad" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 34787B5D21E260DA00BC1F48;
+			productRefGroup = 34787B6721E260DA00BC1F48 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				34787B6521E260DA00BC1F48 /* CenaNavidad */,
+				34787B7921E260DB00BC1F48 /* CenaNavidadTests */,
+				34787B8421E260DB00BC1F48 /* CenaNavidadUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		34787B6421E260DA00BC1F48 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34787B7421E260DB00BC1F48 /* LaunchScreen.storyboard in Resources */,
+				34787BB821E275E700BC1F48 /* ParticipantTableViewCell.xib in Resources */,
+				34787B9B21E261C300BC1F48 /* MainViewController.xib in Resources */,
+				34787BB321E2712500BC1F48 /* AddViewController.xib in Resources */,
+				34787B7121E260DB00BC1F48 /* Assets.xcassets in Resources */,
+				34787BBD21E2989400BC1F48 /* UpdateViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34787B7821E260DB00BC1F48 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34787B8321E260DB00BC1F48 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3901D9294EFE7D9737935C7D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CenaNavidad-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		85B5CF70F41961D11615ACDC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CenaNavidad/Pods-CenaNavidad-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CenaNavidad/Pods-CenaNavidad-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C668F6A814F18167B63F5949 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CenaNavidadTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECA670E91014ABF5AEF2BDB8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CenaNavidadUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		34787B6221E260DA00BC1F48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34787BAF21E26CD300BC1F48 /* LocalParticipantRepository.swift in Sources */,
+				34787BA621E2696A00BC1F48 /* Participant.swift in Sources */,
+				34787BBE21E2989400BC1F48 /* UpdateViewController.swift in Sources */,
+				34787BB421E2712500BC1F48 /* AddViewController.swift in Sources */,
+				34787BB921E275E700BC1F48 /* ParticipantTableViewCell.swift in Sources */,
+				34787B6A21E260DA00BC1F48 /* AppDelegate.swift in Sources */,
+				34787BA921E26B8D00BC1F48 /* Repository.swift in Sources */,
+				34787B9C21E261C300BC1F48 /* MainViewController.swift in Sources */,
+				34787BA321E268F900BC1F48 /* ParticipantEntitie.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34787B7621E260DB00BC1F48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34787B7F21E260DB00BC1F48 /* CenaNavidadTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34787B8121E260DB00BC1F48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34787B8A21E260DB00BC1F48 /* CenaNavidadUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		34787B7C21E260DB00BC1F48 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 34787B6521E260DA00BC1F48 /* CenaNavidad */;
+			targetProxy = 34787B7B21E260DB00BC1F48 /* PBXContainerItemProxy */;
+		};
+		34787B8721E260DB00BC1F48 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 34787B6521E260DA00BC1F48 /* CenaNavidad */;
+			targetProxy = 34787B8621E260DB00BC1F48 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		34787B7221E260DB00BC1F48 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				34787B7321E260DB00BC1F48 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		34787B8C21E260DB00BC1F48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		34787B8D21E260DB00BC1F48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		34787B8F21E260DB00BC1F48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 791CA64B00D0F5D97834CBE1 /* Pods-CenaNavidad.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2W382W25VC;
+				INFOPLIST_FILE = CenaNavidad/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ios.CenaNavidad;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		34787B9021E260DB00BC1F48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C6A44741CEDF9555A22AA87 /* Pods-CenaNavidad.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2W382W25VC;
+				INFOPLIST_FILE = CenaNavidad/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ios.CenaNavidad;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		34787B9221E260DB00BC1F48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC95474D392D47BD79B298AF /* Pods-CenaNavidadTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2W382W25VC;
+				INFOPLIST_FILE = CenaNavidadTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ios.CenaNavidadTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CenaNavidad.app/CenaNavidad";
+			};
+			name = Debug;
+		};
+		34787B9321E260DB00BC1F48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDB3AAD4F253495A4F5860FB /* Pods-CenaNavidadTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2W382W25VC;
+				INFOPLIST_FILE = CenaNavidadTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ios.CenaNavidadTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CenaNavidad.app/CenaNavidad";
+			};
+			name = Release;
+		};
+		34787B9521E260DB00BC1F48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57BF2314D8EF2DCDAC1837CB /* Pods-CenaNavidadUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2W382W25VC;
+				INFOPLIST_FILE = CenaNavidadUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ios.CenaNavidadUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CenaNavidad;
+			};
+			name = Debug;
+		};
+		34787B9621E260DB00BC1F48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3548525BB80756D20CCECA4 /* Pods-CenaNavidadUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2W382W25VC;
+				INFOPLIST_FILE = CenaNavidadUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ios.CenaNavidadUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CenaNavidad;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		34787B6121E260DA00BC1F48 /* Build configuration list for PBXProject "CenaNavidad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34787B8C21E260DB00BC1F48 /* Debug */,
+				34787B8D21E260DB00BC1F48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		34787B8E21E260DB00BC1F48 /* Build configuration list for PBXNativeTarget "CenaNavidad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34787B8F21E260DB00BC1F48 /* Debug */,
+				34787B9021E260DB00BC1F48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		34787B9121E260DB00BC1F48 /* Build configuration list for PBXNativeTarget "CenaNavidadTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34787B9221E260DB00BC1F48 /* Debug */,
+				34787B9321E260DB00BC1F48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		34787B9421E260DB00BC1F48 /* Build configuration list for PBXNativeTarget "CenaNavidadUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34787B9521E260DB00BC1F48 /* Debug */,
+				34787B9621E260DB00BC1F48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 34787B5E21E260DA00BC1F48 /* Project object */;
+}
