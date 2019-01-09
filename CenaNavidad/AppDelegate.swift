@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  CenaNavidad
 //
-//  Created by David gimenez on 6/1/19.
-//  Copyright © 2019 David gimenez. All rights reserved.
+//  Created by Alberto gurpegui on 3/1/19.
+//  Copyright © 2019 Alberto gurpegui. All rights reserved.
 //
 
 import UIKit

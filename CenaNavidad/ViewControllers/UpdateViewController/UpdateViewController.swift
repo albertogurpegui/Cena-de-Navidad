@@ -2,22 +2,23 @@
 //  UpdateViewController.swift
 //  CenaNavidad
 //
-//  Created by David gimenez on 6/1/19.
-//  Copyright © 2019 David gimenez. All rights reserved.
+//  Created by Alberto gurpegui on 3/1/19.
+//  Copyright © 2019 Alberto gurpegui. All rights reserved.
 //
 
 import UIKit
 
 protocol UpdateViewControllerDelegate: class {
     func updateViewController(_ vc: UpdateViewController, didEditParticipant participant: Participant)
+    func errorUpdateViewController(_ vc:UpdateViewController)
 }
 
 class UpdateViewController: UIViewController {
     
     @IBOutlet weak var viewpop: UIView!
-    @IBOutlet weak var idParticipant: UILabel!
-    @IBOutlet weak var nameParticipant: UITextField!
-    @IBOutlet weak var isPaid: UISwitch!
+    @IBOutlet weak var id: UILabel!
+    @IBOutlet weak var name: UITextField!
+    @IBOutlet weak var paid: UISwitch!
     internal var repository: LocalParticipantRepository!
     weak var delegate: UpdateViewControllerDelegate?
     var participant = Participant()
@@ -36,9 +37,9 @@ class UpdateViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        idParticipant.text = participant.id
-        nameParticipant.text = participant.name
-        isPaid.isOn = participant.isPaid
+        id.text = participant.id
+        name.text = participant.name
+        paid.isOn = participant.paid
         viewpop.layer.cornerRadius = 8
         viewpop.layer.masksToBounds = true
         repository = LocalParticipantRepository()
@@ -48,14 +49,14 @@ class UpdateViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    
-    /*
-        Actualizo el nombre y el estado de si a pagado el participante o no. Normalmente el nombre no se deberia actualizar y se deberia solo mostrar.
-     */
     @IBAction func updateButtonRessed() {
-            participant.id = idParticipant.text!
-            participant.name = nameParticipant.text!
-            participant.isPaid = isPaid.isOn
+        if (repository.get(name: name.text!) != nil) ||
+            (name.text?.elementsEqual(""))! {
+            self.delegate?.errorUpdateViewController(self)
+        }else{
+            participant.id = id.text!
+            participant.name = name.text!
+            participant.paid = paid.isOn
             participant.creationDate = Date()
             UIView.animate(withDuration: 0.25, animations: {
                 self.view.backgroundColor = UIColor.clear
@@ -64,7 +65,7 @@ class UpdateViewController: UIViewController {
                     self.delegate?.updateViewController(self, didEditParticipant: self.participant)
                 }
             }
-       
+        }
     }
     
     @IBAction func cancelButtonRessed() {

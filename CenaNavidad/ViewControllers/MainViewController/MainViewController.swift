@@ -2,8 +2,8 @@
 //  MainViewController.swift
 //  CenaNavidad
 //
-//  Created by David gimenez on 6/1/19.
-//  Copyright © 2019 David gimenez. All rights reserved.
+//  Created by Alberto gurpegui on 3/1/19.
+//  Copyright © 2019 Alberto gurpegui. All rights reserved.
 //
 
 import UIKit
@@ -15,8 +15,8 @@ class MainViewController: UIViewController {
     internal  var repository:LocalParticipantRepository!
     internal var participants:[Participant] = []
     internal var filteredParticipants: [Participant] = []
-    let realm = try! Realm()
     let searchController = UISearchController(searchResultsController: nil)
+    let realm = try! Realm()
     var participant:Participant?
     
     override func viewDidAppear(_ animated: Bool) {
@@ -37,14 +37,6 @@ class MainViewController: UIViewController {
         configSearchBar()
     }
     
-    internal func configSearchBar(){
-        searchController.searchResultsUpdater = self
-        searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Buscar..."
-        searchController.searchBar.backgroundColor = UIColor.white
-        navigationItem.searchController = searchController
-    }
-
     internal func registerCell(){
         let identifier = "ParticipantTableViewCell"
         let cellNib = UINib(nibName: identifier, bundle: nil)
@@ -54,6 +46,22 @@ class MainViewController: UIViewController {
     internal func createButtonAdd(){
         let addButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addPressed))
         navigationItem.rightBarButtonItem = addButtonItem
+    }
+    
+    @objc internal func addPressed (){
+        let addVC = AddViewController()
+        addVC.delegate = self
+        addVC.modalTransitionStyle = .coverVertical
+        addVC.modalPresentationStyle = .overCurrentContext
+        present(addVC,animated: true,completion: nil)
+    }
+    
+    internal func configSearchBar(){
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Buscar..."
+        searchController.searchBar.backgroundColor = UIColor.white
+        navigationItem.searchController = searchController
     }
     
     internal func searchBarIsEmpty() -> Bool{
@@ -69,14 +77,6 @@ class MainViewController: UIViewController {
             return (nParticipants.name.lowercased().contains(searchText.lowercased()))
         })
         tableView.reloadData()
-    }
-    
-    @objc internal func addPressed (){
-        let addVC = AddViewController()
-        addVC.delegate = self
-        addVC.modalTransitionStyle = .coverVertical
-        addVC.modalPresentationStyle = .overCurrentContext
-        present(addVC,animated: true,completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -107,11 +107,11 @@ extension MainViewController: UITableViewDelegate ,UITableViewDataSource{
         if isFiltering(){
             let participant = filteredParticipants[indexPath.row]
             cell.nameParticipant.text = participant.name
-            cell.checkimagenPaid.isHidden = !participant.isPaid
+            cell.checkimagenPaid.isHidden = !participant.paid
         }else{
             let participant = participants[indexPath.row]
             cell.nameParticipant.text = participant.name
-            cell.checkimagenPaid.isHidden = !participant.isPaid
+            cell.checkimagenPaid.isHidden = !participant.paid
         }
        
         return cell
@@ -166,16 +166,16 @@ extension MainViewController: UITableViewDelegate ,UITableViewDataSource{
 }
 
 extension MainViewController : AddViewControllerDelegate{
-    func errorAddViewController(_ vc: AddViewController) {
-        vc.dismiss(animated: true, completion: nil)
-        print("Error, no se pudo añadir, por que esta repetido o por que esta vacio.")
-    }
-    
     func addViewController(_ vc: AddViewController, didEditParticipant: Participant) {
         vc.dismiss(animated: true){
                 self.participants = self.repository.getAll()
                 self.tableView.reloadData()
         }
+    }
+    
+    func errorAddViewController(_ vc: AddViewController) {
+        vc.dismiss(animated: true, completion: nil)
+        print("Error, no se pudo añadir, por que esta repetido o por que esta vacio.")
     }
 }
 
@@ -185,7 +185,12 @@ extension MainViewController: UpdateViewControllerDelegate {
             self.participants = self.repository.getAll()
             self.tableView.reloadData()
         }
-    }    
+    }
+    
+    func errorUpdateViewController(_ vc: UpdateViewController) {
+        vc.dismiss(animated: true, completion: nil)
+        print("Error, no se pudo añadir, por que esta repetido o por que esta vacio.")
+    }
 }
 
 extension MainViewController: UISearchResultsUpdating{

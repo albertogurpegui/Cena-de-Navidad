@@ -14,7 +14,7 @@
 		34787B8A21E260DB00BC1F48 /* CenaNavidadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34787B8921E260DB00BC1F48 /* CenaNavidadUITests.swift */; };
 		34787B9B21E261C300BC1F48 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34787B9921E261C300BC1F48 /* MainViewController.xib */; };
 		34787B9C21E261C300BC1F48 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34787B9A21E261C300BC1F48 /* MainViewController.swift */; };
-		34787BA321E268F900BC1F48 /* ParticipantEntitie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34787BA221E268F900BC1F48 /* ParticipantEntitie.swift */; };
+		34787BA321E268F900BC1F48 /* ParticipantEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34787BA221E268F900BC1F48 /* ParticipantEntity.swift */; };
 		34787BA621E2696A00BC1F48 /* Participant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34787BA521E2696A00BC1F48 /* Participant.swift */; };
 		34787BA921E26B8D00BC1F48 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34787BA821E26B8D00BC1F48 /* Repository.swift */; };
 		34787BAF21E26CD300BC1F48 /* LocalParticipantRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34787BAE21E26CD300BC1F48 /* LocalParticipantRepository.swift */; };
@@ -61,7 +61,7 @@
 		34787B8B21E260DB00BC1F48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34787B9921E261C300BC1F48 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		34787B9A21E261C300BC1F48 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		34787BA221E268F900BC1F48 /* ParticipantEntitie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantEntitie.swift; sourceTree = "<group>"; };
+		34787BA221E268F900BC1F48 /* ParticipantEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantEntity.swift; sourceTree = "<group>"; };
 		34787BA521E2696A00BC1F48 /* Participant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Participant.swift; sourceTree = "<group>"; };
 		34787BA821E26B8D00BC1F48 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		34787BAE21E26CD300BC1F48 /* LocalParticipantRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalParticipantRepository.swift; sourceTree = "<group>"; };
@@ -187,7 +187,7 @@
 		34787B9D21E2685400BC1F48 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				34787BA221E268F900BC1F48 /* ParticipantEntitie.swift */,
+				34787BA221E268F900BC1F48 /* ParticipantEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -482,7 +482,7 @@
 				34787B6A21E260DA00BC1F48 /* AppDelegate.swift in Sources */,
 				34787BA921E26B8D00BC1F48 /* Repository.swift in Sources */,
 				34787B9C21E261C300BC1F48 /* MainViewController.swift in Sources */,
-				34787BA321E268F900BC1F48 /* ParticipantEntitie.swift in Sources */,
+				34787BA321E268F900BC1F48 /* ParticipantEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

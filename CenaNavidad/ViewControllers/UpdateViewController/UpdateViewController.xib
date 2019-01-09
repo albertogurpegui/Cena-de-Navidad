@@ -12,9 +12,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UpdateViewController" customModule="CenaNavidad" customModuleProvider="target">
             <connections>
-                <outlet property="idParticipant" destination="21z-Xw-wqy" id="uNz-NX-HBS"/>
-                <outlet property="isPaid" destination="5Jc-sj-73l" id="Rr7-zC-Ogp"/>
-                <outlet property="nameParticipant" destination="9wt-yD-4Dh" id="NxU-LS-RAy"/>
+                <outlet property="id" destination="21z-Xw-wqy" id="uNz-NX-HBS"/>
+                <outlet property="name" destination="9wt-yD-4Dh" id="NxU-LS-RAy"/>
+                <outlet property="paid" destination="5Jc-sj-73l" id="Rr7-zC-Ogp"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewpop" destination="nfo-Hw-9Q8" id="nsh-w7-BcS"/>
             </connections>

@@ -2,8 +2,8 @@
 //  AddViewController.swift
 //  CenaNavidad
 //
-//  Created by David gimenez on 6/1/19.
-//  Copyright © 2019 David gimenez. All rights reserved.
+//  Created by Alberto gurpegui on 3/1/19.
+//  Copyright © 2019 Alberto gurpegui. All rights reserved.
 //
 
 import UIKit
@@ -15,7 +15,7 @@ protocol AddViewControllerDelegate: class {
 
 class AddViewController: UIViewController {
     @IBOutlet weak var viewPopup: UIView!
-    @IBOutlet weak var nameParticipant: UITextField!
+    @IBOutlet weak var name: UITextField!
     internal var repository: LocalParticipantRepository!
     weak var delegate: AddViewControllerDelegate?
     
@@ -38,15 +38,15 @@ class AddViewController: UIViewController {
     }
     
     @IBAction func createButtonPressed() {
-        if (repository.get(name: nameParticipant.text!) != nil) ||
-            (nameParticipant.text?.elementsEqual(""))! {
+        if (repository.get(name: name.text!) != nil) ||
+            (name.text?.elementsEqual(""))! {
             self.delegate?.errorAddViewController(self)
         }else{
             let participant = Participant()
             participant.id = UUID().uuidString
-            participant.name = nameParticipant.text!
+            participant.name = name.text!
+            participant.paid = false
             participant.creationDate = Date()
-            participant.isPaid = false
             UIView.animate(withDuration: 0.25, animations: {
                 self.view.backgroundColor = UIColor.clear
             }) { (bool) in

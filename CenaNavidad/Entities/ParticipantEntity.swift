@@ -13,7 +13,7 @@ class ParticipantEntity: Object {
     
     @objc dynamic var id = ""
     @objc dynamic var name = ""
-    @objc dynamic var isPaid = false
+    @objc dynamic var paid = false
     @objc dynamic var creationDate = Date()
     
     
@@ -25,7 +25,7 @@ class ParticipantEntity: Object {
         self.init()
         self.id = participant.id
         self.name = participant.name
-        self.isPaid = participant.isPaid
+        self.paid = participant.paid
         self.creationDate = participant.creationDate
     }
     
@@ -33,7 +33,7 @@ class ParticipantEntity: Object {
         let model = Participant()
         model.id = id
         model.name = name
-        model.isPaid = isPaid
+        model.paid = paid
         model.creationDate = creationDate
         return model
     }
