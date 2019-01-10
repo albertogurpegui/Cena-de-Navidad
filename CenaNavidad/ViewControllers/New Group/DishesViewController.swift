@@ -1,44 +1,44 @@
 //
-//  MainViewController.swift
+//  DishesViewController.swift
 //  CenaNavidad
 //
-//  Created by Alberto gurpegui on 3/1/19.
-//  Copyright © 2019 Alberto gurpegui. All rights reserved.
+//  Created by ALBERTO GURPEGUI RAMÓN on 10/1/19.
+//  Copyright © 2019 David gimenez. All rights reserved.
 //
 
 import UIKit
 import RealmSwift
 
-class MainViewController: UIViewController {
-    
+class DishesViewController: UIViewController {
+
     @IBOutlet weak var tableView:UITableView!
-    internal  var repository:LocalParticipantRepository!
-    internal var participants:[Participant] = []
-    internal var filteredParticipants: [Participant] = []
+    internal  var repository:LocalDishRepository!
+    internal var dishes: [Dish] = []
+    internal var filteredDishes: [Dish] = []
     let searchController = UISearchController(searchResultsController: nil)
     let realm = try! Realm()
-    var participant:Participant?
+    var dish:Dish?
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        participants = repository.getAll()
+        dishes = repository.getAll()
         tableView.reloadData()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "PARTICIPANTES"
+        title = "PLATOS"
         registerCell()
-
-        repository = LocalParticipantRepository()
-        participants = repository.getAll()
-
+        
+        repository = LocalDishRepository()
+        dishes = repository.getAll()
+        
         createButtonAdd()
         configSearchBar()
     }
     
     internal func registerCell(){
-        let identifier = "ParticipantTableViewCell"
+        let identifier = "DishTableViewCell"
         let cellNib = UINib(nibName: identifier, bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier: identifier)
     }
@@ -49,7 +49,7 @@ class MainViewController: UIViewController {
     }
     
     @objc internal func addPressed (){
-        let addVC = AddParticipantViewController()
+        let addVC = AddDishViewController()
         addVC.delegate = self
         addVC.modalTransitionStyle = .coverVertical
         addVC.modalPresentationStyle = .overCurrentContext
@@ -73,19 +73,19 @@ class MainViewController: UIViewController {
     }
     
     internal func filterContentForSearchText(_ searchText: String){
-        filteredParticipants = participants.filter({ (nParticipants: Participant ) -> Bool in
+        filteredDishes = dishes.filter({ (nParticipants: Dish ) -> Bool in
             return (nParticipants.name.lowercased().contains(searchText.lowercased()))
         })
         tableView.reloadData()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 }
 
-extension MainViewController: UITableViewDelegate ,UITableViewDataSource{
+extension DishesViewController: UITableViewDelegate ,UITableViewDataSource{
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -96,24 +96,22 @@ extension MainViewController: UITableViewDelegate ,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if isFiltering(){
-            return filteredParticipants.count
+            return filteredDishes.count
         }else{
-            return participants.count
+            return dishes.count
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell:ParticipantTableViewCell = tableView.dequeueReusableCell(withIdentifier: "ParticipantTableViewCell", for: indexPath) as! ParticipantTableViewCell
+        let cell:DishTableViewCell = tableView.dequeueReusableCell(withIdentifier: "DishTableViewCell", for: indexPath) as! DishTableViewCell
         if isFiltering(){
-            let participant = filteredParticipants[indexPath.row]
-            cell.nameParticipant.text = participant.name
-            cell.checkimagenPaid.isHidden = !participant.paid
+            let dish = filteredDishes[indexPath.row]
+            cell.nameDish.text = dish.name
         }else{
-            let participant = participants[indexPath.row]
-            cell.nameParticipant.text = participant.name
-            cell.checkimagenPaid.isHidden = !participant.paid
+            let dish = filteredDishes[indexPath.row]
+            cell.nameDish.text = dish.name
         }
-       
+        
         return cell
     }
     
@@ -124,16 +122,16 @@ extension MainViewController: UITableViewDelegate ,UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if isFiltering(){
-            let participant = filteredParticipants[indexPath.row]
-            let updateVC = UpdateParticipantViewController(participant: participant)
+            let dish = filteredDishes[indexPath.row]
+            let updateVC = UpdateDishViewController(dish: dish)
             updateVC.delegate = self
             updateVC.modalTransitionStyle = .coverVertical
             updateVC.modalPresentationStyle = .overCurrentContext
             searchController.dismiss(animated: true, completion: nil)
             present(updateVC, animated: true, completion: nil)
         }else{
-            let participant = participants[indexPath.row]
-            let updateVC = UpdateParticipantViewController(participant: participant)
+            let dish = dishes[indexPath.row]
+            let updateVC = UpdateDishViewController(dish: dish)
             updateVC.delegate = self
             updateVC.modalTransitionStyle = .coverVertical
             updateVC.modalPresentationStyle = .overCurrentContext
@@ -145,17 +143,17 @@ extension MainViewController: UITableViewDelegate ,UITableViewDataSource{
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete{
             if isFiltering(){
-                let participant = filteredParticipants[indexPath.row]
-                if repository.delete(a: participant){
-                    participants.remove(at: indexPath.row)
+                let dish = filteredDishes[indexPath.row]
+                if repository.delete(a: dish){
+                    dishes.remove(at: indexPath.row)
                     tableView.beginUpdates()
                     tableView.deleteRows(at: [indexPath], with: .automatic)
                     tableView.endUpdates()
                 }
             }else{
-                let participant = participants[indexPath.row]
-                if repository.delete(a: participant){
-                    participants.remove(at: indexPath.row)
+                let dish = dishes[indexPath.row]
+                if repository.delete(a: dish){
+                    dishes.remove(at: indexPath.row)
                     tableView.beginUpdates()
                     tableView.deleteRows(at: [indexPath], with: .automatic)
                     tableView.endUpdates()
@@ -165,31 +163,15 @@ extension MainViewController: UITableViewDelegate ,UITableViewDataSource{
     }
 }
 
-extension MainViewController : AddParticipantViewControllerDelegate{
-    func addParticipantViewController(_ vc: AddParticipantViewController, didEditParticipant: Participant) {
+extension DishesViewController : AddDishViewControllerDelegate{
+    func addDishViewController(_ vc: AddDishViewController, didEditDish: Dish) {
         vc.dismiss(animated: true){
-                self.participants = self.repository.getAll()
-                self.tableView.reloadData()
-        }
-    }
-    
-    func errorAddParticipantViewController(_ vc: AddParticipantViewController) {
-        vc.dismiss(animated: true, completion: nil)
-        let alert = UIAlertController(title: "ERROR", message: "Esta repetido o vacio el nombre", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
-    }
-}
-
-extension MainViewController: UpdateParticipantViewControllerDelegate {
-    func updateParticipantViewController(_ vc: UpdateParticipantViewController, didEditParticipant participant: Participant) {
-        vc.dismiss(animated: true){
-            self.participants = self.repository.getAll()
+            self.dishes = self.repository.getAll()
             self.tableView.reloadData()
         }
     }
     
-    func errorUpdateParticipantViewController(_ vc: UpdateParticipantViewController) {
+    func errorAddDishViewController(_ vc: AddDishViewController) {
         vc.dismiss(animated: true, completion: nil)
         let alert = UIAlertController(title: "ERROR", message: "Esta repetido o vacio el nombre", preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
@@ -197,7 +179,23 @@ extension MainViewController: UpdateParticipantViewControllerDelegate {
     }
 }
 
-extension MainViewController: UISearchResultsUpdating{
+extension DishesViewController: UpdateDishViewControllerDelegate {
+    func updateDishViewController(_ vc: UpdateDishViewController, didEditDish dish: Dish) {
+        vc.dismiss(animated: true){
+            self.dishes = self.repository.getAll()
+            self.tableView.reloadData()
+        }
+    }
+    
+    func errorUpdateDishViewController(_ vc: UpdateDishViewController) {
+        vc.dismiss(animated: true, completion: nil)
+        let alert = UIAlertController(title: "ERROR", message: "Esta repetido o vacio el nombre", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+}
+
+extension DishesViewController: UISearchResultsUpdating{
     func updateSearchResults(for searchController: UISearchController) {
         filterContentForSearchText(searchController.searchBar.text!)
     }

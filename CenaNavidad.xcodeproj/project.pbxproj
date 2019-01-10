@@ -22,6 +22,17 @@
 		34787BB921E275E700BC1F48 /* ParticipantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34787BB721E275E700BC1F48 /* ParticipantTableViewCell.swift */; };
 		34787BBD21E2989400BC1F48 /* UpdateParticipantViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34787BBB21E2989400BC1F48 /* UpdateParticipantViewController.xib */; };
 		34787BBE21E2989400BC1F48 /* UpdateParticipantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34787BBC21E2989400BC1F48 /* UpdateParticipantViewController.swift */; };
+		651999B021E7BAB2005AE1D8 /* DishTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651999AE21E7BAB2005AE1D8 /* DishTableViewCell.swift */; };
+		651999B121E7BAB2005AE1D8 /* DishTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 651999AF21E7BAB2005AE1D8 /* DishTableViewCell.xib */; };
+		651999B321E7BB09005AE1D8 /* LocalDishRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651999B221E7BB09005AE1D8 /* LocalDishRepository.swift */; };
+		651999B621E7BFDB005AE1D8 /* UpdateDishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651999B421E7BFDB005AE1D8 /* UpdateDishViewController.swift */; };
+		651999B921E7C1EF005AE1D8 /* UpdateDishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 651999B821E7C1EF005AE1D8 /* UpdateDishViewController.xib */; };
+		651999BC21E7C65B005AE1D8 /* AddDishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651999BA21E7C65B005AE1D8 /* AddDishViewController.swift */; };
+		651999BD21E7C65B005AE1D8 /* AddDishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 651999BB21E7C65B005AE1D8 /* AddDishViewController.xib */; };
+		65CCB1BF21E7B4570003131E /* DishesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CCB1BD21E7B4570003131E /* DishesViewController.swift */; };
+		65CCB1C021E7B4570003131E /* DishesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65CCB1BE21E7B4570003131E /* DishesViewController.xib */; };
+		65CCB1C221E7B5310003131E /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CCB1C121E7B5310003131E /* Dish.swift */; };
+		65CCB1C421E7B5C40003131E /* DishEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CCB1C321E7B5C40003131E /* DishEntity.swift */; };
 		7C31FC8FB3F32529D15D2534 /* Pods_CenaNavidadUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7489ACA31BA390D4F438EF95 /* Pods_CenaNavidadUITests.framework */; };
 		B36FB11865A2DA66189DF211 /* Pods_CenaNavidad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F03258A4E14B628B6810C26 /* Pods_CenaNavidad.framework */; };
 		C807E381D3D3B5BF8D44DD6C /* Pods_CenaNavidadTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 537B4E5DDBA0ABF211AD3FC4 /* Pods_CenaNavidadTests.framework */; };
@@ -66,13 +77,20 @@
 		34787BBB21E2989400BC1F48 /* UpdateParticipantViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateParticipantViewController.xib; sourceTree = "<group>"; };
 		34787BBC21E2989400BC1F48 /* UpdateParticipantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateParticipantViewController.swift; sourceTree = "<group>"; };
 		537B4E5DDBA0ABF211AD3FC4 /* Pods_CenaNavidadTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CenaNavidadTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		57BF2314D8EF2DCDAC1837CB /* Pods-CenaNavidadUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CenaNavidadUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CenaNavidadUITests/Pods-CenaNavidadUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		651999AE21E7BAB2005AE1D8 /* DishTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishTableViewCell.swift; sourceTree = "<group>"; };
+		651999AF21E7BAB2005AE1D8 /* DishTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishTableViewCell.xib; sourceTree = "<group>"; };
+		651999B221E7BB09005AE1D8 /* LocalDishRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDishRepository.swift; sourceTree = "<group>"; };
+		651999B421E7BFDB005AE1D8 /* UpdateDishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateDishViewController.swift; sourceTree = "<group>"; };
+		651999B821E7C1EF005AE1D8 /* UpdateDishViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateDishViewController.xib; sourceTree = "<group>"; };
+		651999BA21E7C65B005AE1D8 /* AddDishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDishViewController.swift; sourceTree = "<group>"; };
+		651999BB21E7C65B005AE1D8 /* AddDishViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddDishViewController.xib; sourceTree = "<group>"; };
+		65CCB1BD21E7B4570003131E /* DishesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesViewController.swift; sourceTree = "<group>"; };
+		65CCB1BE21E7B4570003131E /* DishesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishesViewController.xib; sourceTree = "<group>"; };
+		65CCB1C121E7B5310003131E /* Dish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
+		65CCB1C321E7B5C40003131E /* DishEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishEntity.swift; sourceTree = "<group>"; };
 		7489ACA31BA390D4F438EF95 /* Pods_CenaNavidadUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CenaNavidadUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		791CA64B00D0F5D97834CBE1 /* Pods-CenaNavidad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CenaNavidad.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CenaNavidad/Pods-CenaNavidad.debug.xcconfig"; sourceTree = "<group>"; };
 		7F03258A4E14B628B6810C26 /* Pods_CenaNavidad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CenaNavidad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AC95474D392D47BD79B298AF /* Pods-CenaNavidadTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CenaNavidadTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CenaNavidadTests/Pods-CenaNavidadTests.debug.xcconfig"; sourceTree = "<group>"; };
-		BDB3AAD4F253495A4F5860FB /* Pods-CenaNavidadTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CenaNavidadTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CenaNavidadTests/Pods-CenaNavidadTests.release.xcconfig"; sourceTree = "<group>"; };
-		D3548525BB80756D20CCECA4 /* Pods-CenaNavidadUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CenaNavidadUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CenaNavidadUITests/Pods-CenaNavidadUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +160,7 @@
 		34787B9721E2617700BC1F48 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				65CCB1BC21E7B42D0003131E /* DishesViewController */,
 				34787BBA21E2986E00BC1F48 /* UpdateViewController */,
 				34787BB021E270FC00BC1F48 /* AddViewController */,
 				34787B9821E261A100BC1F48 /* MainViewController */,
@@ -162,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				34787BA221E268F900BC1F48 /* ParticipantEntity.swift */,
+				65CCB1C321E7B5C40003131E /* DishEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -170,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				34787BA521E2696A00BC1F48 /* Participant.swift */,
+				65CCB1C121E7B5310003131E /* Dish.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -179,6 +200,7 @@
 			children = (
 				34787BA821E26B8D00BC1F48 /* Repository.swift */,
 				34787BAE21E26CD300BC1F48 /* LocalParticipantRepository.swift */,
+				651999B221E7BB09005AE1D8 /* LocalDishRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -188,6 +210,8 @@
 			children = (
 				34787BB121E2712500BC1F48 /* AddParticipantViewController.xib */,
 				34787BB221E2712500BC1F48 /* AddParticipantViewController.swift */,
+				651999BB21E7C65B005AE1D8 /* AddDishViewController.xib */,
+				651999BA21E7C65B005AE1D8 /* AddDishViewController.swift */,
 			);
 			path = AddViewController;
 			sourceTree = "<group>";
@@ -197,6 +221,8 @@
 			children = (
 				34787BB621E275E700BC1F48 /* ParticipantTableViewCell.xib */,
 				34787BB721E275E700BC1F48 /* ParticipantTableViewCell.swift */,
+				651999AF21E7BAB2005AE1D8 /* DishTableViewCell.xib */,
+				651999AE21E7BAB2005AE1D8 /* DishTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -206,8 +232,20 @@
 			children = (
 				34787BBB21E2989400BC1F48 /* UpdateParticipantViewController.xib */,
 				34787BBC21E2989400BC1F48 /* UpdateParticipantViewController.swift */,
+				651999B821E7C1EF005AE1D8 /* UpdateDishViewController.xib */,
+				651999B421E7BFDB005AE1D8 /* UpdateDishViewController.swift */,
 			);
 			path = UpdateViewController;
+			sourceTree = "<group>";
+		};
+		65CCB1BC21E7B42D0003131E /* DishesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				65CCB1BE21E7B4570003131E /* DishesViewController.xib */,
+				65CCB1BD21E7B4570003131E /* DishesViewController.swift */,
+			);
+			name = DishesViewController;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		C10A5A1855685113FBC3C384 /* Pods */ = {
@@ -215,10 +253,6 @@
 			children = (
 				791CA64B00D0F5D97834CBE1 /* Pods-CenaNavidad.debug.xcconfig */,
 				2C6A44741CEDF9555A22AA87 /* Pods-CenaNavidad.release.xcconfig */,
-				AC95474D392D47BD79B298AF /* Pods-CenaNavidadTests.debug.xcconfig */,
-				BDB3AAD4F253495A4F5860FB /* Pods-CenaNavidadTests.release.xcconfig */,
-				57BF2314D8EF2DCDAC1837CB /* Pods-CenaNavidadUITests.debug.xcconfig */,
-				D3548525BB80756D20CCECA4 /* Pods-CenaNavidadUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -342,11 +376,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				34787B7421E260DB00BC1F48 /* LaunchScreen.storyboard in Resources */,
+				651999B121E7BAB2005AE1D8 /* DishTableViewCell.xib in Resources */,
 				34787BB821E275E700BC1F48 /* ParticipantTableViewCell.xib in Resources */,
+				65CCB1C021E7B4570003131E /* DishesViewController.xib in Resources */,
 				34787B9B21E261C300BC1F48 /* MainViewController.xib in Resources */,
 				34787BB321E2712500BC1F48 /* AddParticipantViewController.xib in Resources */,
+				651999BD21E7C65B005AE1D8 /* AddDishViewController.xib in Resources */,
 				34787B7121E260DB00BC1F48 /* Assets.xcassets in Resources */,
 				34787BBD21E2989400BC1F48 /* UpdateParticipantViewController.xib in Resources */,
+				651999B921E7C1EF005AE1D8 /* UpdateDishViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,13 +486,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				651999B621E7BFDB005AE1D8 /* UpdateDishViewController.swift in Sources */,
+				65CCB1BF21E7B4570003131E /* DishesViewController.swift in Sources */,
+				651999B021E7BAB2005AE1D8 /* DishTableViewCell.swift in Sources */,
 				34787BAF21E26CD300BC1F48 /* LocalParticipantRepository.swift in Sources */,
+				65CCB1C221E7B5310003131E /* Dish.swift in Sources */,
 				34787BA621E2696A00BC1F48 /* Participant.swift in Sources */,
+				651999BC21E7C65B005AE1D8 /* AddDishViewController.swift in Sources */,
+				65CCB1C421E7B5C40003131E /* DishEntity.swift in Sources */,
 				34787BBE21E2989400BC1F48 /* UpdateParticipantViewController.swift in Sources */,
 				34787BB421E2712500BC1F48 /* AddParticipantViewController.swift in Sources */,
 				34787BB921E275E700BC1F48 /* ParticipantTableViewCell.swift in Sources */,
 				34787B6A21E260DA00BC1F48 /* AppDelegate.swift in Sources */,
 				34787BA921E26B8D00BC1F48 /* Repository.swift in Sources */,
+				651999B321E7BB09005AE1D8 /* LocalDishRepository.swift in Sources */,
 				34787B9C21E261C300BC1F48 /* MainViewController.swift in Sources */,
 				34787BA321E268F900BC1F48 /* ParticipantEntity.swift in Sources */,
 			);
@@ -655,7 +700,6 @@
 		};
 		34787B9221E260DB00BC1F48 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AC95474D392D47BD79B298AF /* Pods-CenaNavidadTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -677,7 +721,6 @@
 		};
 		34787B9321E260DB00BC1F48 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BDB3AAD4F253495A4F5860FB /* Pods-CenaNavidadTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -699,7 +742,6 @@
 		};
 		34787B9521E260DB00BC1F48 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 57BF2314D8EF2DCDAC1837CB /* Pods-CenaNavidadUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -720,7 +762,6 @@
 		};
 		34787B9621E260DB00BC1F48 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D3548525BB80756D20CCECA4 /* Pods-CenaNavidadUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
