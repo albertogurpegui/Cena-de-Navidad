@@ -8,16 +8,16 @@
 
 import UIKit
 
-protocol AddViewControllerDelegate: class {
-    func addViewController(_ vc: AddViewController, didEditParticipant participant: Participant)
-    func errorAddViewController(_ vc:AddViewController)
+protocol AddParticipantViewControllerDelegate: class {
+    func addParticipantViewController(_ vc: AddParticipantViewController, didEditParticipant participant: Participant)
+    func errorAddParticipantViewController(_ vc:AddParticipantViewController)
 }
 
-class AddViewController: UIViewController {
+class AddParticipantViewController: UIViewController {
     @IBOutlet weak var viewPopup: UIView!
     @IBOutlet weak var name: UITextField!
     internal var repository: LocalParticipantRepository!
-    weak var delegate: AddViewControllerDelegate?
+    weak var delegate: AddParticipantViewControllerDelegate?
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -40,7 +40,7 @@ class AddViewController: UIViewController {
     @IBAction func createButtonPressed() {
         if (repository.get(name: name.text!) != nil) ||
             (name.text?.elementsEqual(""))! {
-            self.delegate?.errorAddViewController(self)
+            self.delegate?.errorAddParticipantViewController(self)
         }else{
             let participant = Participant()
             participant.id = UUID().uuidString
@@ -51,7 +51,7 @@ class AddViewController: UIViewController {
                 self.view.backgroundColor = UIColor.clear
             }) { (bool) in
                 if self.repository.create(a: participant){
-                    self.delegate?.addViewController(self, didEditParticipant: participant)
+                    self.delegate?.addParticipantViewController(self, didEditParticipant: participant)
                 }
             }
         }

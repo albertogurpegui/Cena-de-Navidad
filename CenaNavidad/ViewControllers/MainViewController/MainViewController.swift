@@ -27,7 +27,7 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        title = "PARTICIPANTS"
         registerCell()
 
         repository = LocalParticipantRepository()
@@ -49,7 +49,7 @@ class MainViewController: UIViewController {
     }
     
     @objc internal func addPressed (){
-        let addVC = AddViewController()
+        let addVC = AddParticipantViewController()
         addVC.delegate = self
         addVC.modalTransitionStyle = .coverVertical
         addVC.modalPresentationStyle = .overCurrentContext
@@ -125,7 +125,7 @@ extension MainViewController: UITableViewDelegate ,UITableViewDataSource{
         
         if isFiltering(){
             let participant = filteredParticipants[indexPath.row]
-            let updateVC = UpdateViewController(participant: participant)
+            let updateVC = UpdateParticipantViewController(participant: participant)
             updateVC.delegate = self
             updateVC.modalTransitionStyle = .coverVertical
             updateVC.modalPresentationStyle = .overCurrentContext
@@ -133,7 +133,7 @@ extension MainViewController: UITableViewDelegate ,UITableViewDataSource{
             present(updateVC, animated: true, completion: nil)
         }else{
             let participant = participants[indexPath.row]
-            let updateVC = UpdateViewController(participant: participant)
+            let updateVC = UpdateParticipantViewController(participant: participant)
             updateVC.delegate = self
             updateVC.modalTransitionStyle = .coverVertical
             updateVC.modalPresentationStyle = .overCurrentContext
@@ -165,31 +165,35 @@ extension MainViewController: UITableViewDelegate ,UITableViewDataSource{
     }
 }
 
-extension MainViewController : AddViewControllerDelegate{
-    func addViewController(_ vc: AddViewController, didEditParticipant: Participant) {
+extension MainViewController : AddParticipantViewControllerDelegate{
+    func addParticipantViewController(_ vc: AddParticipantViewController, didEditParticipant: Participant) {
         vc.dismiss(animated: true){
                 self.participants = self.repository.getAll()
                 self.tableView.reloadData()
         }
     }
     
-    func errorAddViewController(_ vc: AddViewController) {
+    func errorAddParticipantViewController(_ vc: AddParticipantViewController) {
         vc.dismiss(animated: true, completion: nil)
-        print("Error, no se pudo añadir, por que esta repetido o por que esta vacio.")
+        let alert = UIAlertController(title: "ERROR", message: "Esta repetido o vacio el nombre", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
-extension MainViewController: UpdateViewControllerDelegate {
-    func updateViewController(_ vc: UpdateViewController, didEditParticipant participant: Participant) {
+extension MainViewController: UpdateParticipantViewControllerDelegate {
+    func updateParticipantViewController(_ vc: UpdateParticipantViewController, didEditParticipant participant: Participant) {
         vc.dismiss(animated: true){
             self.participants = self.repository.getAll()
             self.tableView.reloadData()
         }
     }
     
-    func errorUpdateViewController(_ vc: UpdateViewController) {
+    func errorUpdateParticipantViewController(_ vc: UpdateParticipantViewController) {
         vc.dismiss(animated: true, completion: nil)
-        print("Error, no se pudo añadir, por que esta repetido o por que esta vacio.")
+        let alert = UIAlertController(title: "ERROR", message: "Esta repetido o vacio el nombre", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }
 

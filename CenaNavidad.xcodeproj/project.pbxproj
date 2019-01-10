@@ -10,20 +10,18 @@
 		34787B6A21E260DA00BC1F48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34787B6921E260DA00BC1F48 /* AppDelegate.swift */; };
 		34787B7121E260DB00BC1F48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34787B7021E260DB00BC1F48 /* Assets.xcassets */; };
 		34787B7421E260DB00BC1F48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34787B7221E260DB00BC1F48 /* LaunchScreen.storyboard */; };
-		34787B7F21E260DB00BC1F48 /* CenaNavidadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34787B7E21E260DB00BC1F48 /* CenaNavidadTests.swift */; };
-		34787B8A21E260DB00BC1F48 /* CenaNavidadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34787B8921E260DB00BC1F48 /* CenaNavidadUITests.swift */; };
 		34787B9B21E261C300BC1F48 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34787B9921E261C300BC1F48 /* MainViewController.xib */; };
 		34787B9C21E261C300BC1F48 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34787B9A21E261C300BC1F48 /* MainViewController.swift */; };
 		34787BA321E268F900BC1F48 /* ParticipantEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34787BA221E268F900BC1F48 /* ParticipantEntity.swift */; };
 		34787BA621E2696A00BC1F48 /* Participant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34787BA521E2696A00BC1F48 /* Participant.swift */; };
 		34787BA921E26B8D00BC1F48 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34787BA821E26B8D00BC1F48 /* Repository.swift */; };
 		34787BAF21E26CD300BC1F48 /* LocalParticipantRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34787BAE21E26CD300BC1F48 /* LocalParticipantRepository.swift */; };
-		34787BB321E2712500BC1F48 /* AddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34787BB121E2712500BC1F48 /* AddViewController.xib */; };
-		34787BB421E2712500BC1F48 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34787BB221E2712500BC1F48 /* AddViewController.swift */; };
+		34787BB321E2712500BC1F48 /* AddParticipantViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34787BB121E2712500BC1F48 /* AddParticipantViewController.xib */; };
+		34787BB421E2712500BC1F48 /* AddParticipantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34787BB221E2712500BC1F48 /* AddParticipantViewController.swift */; };
 		34787BB821E275E700BC1F48 /* ParticipantTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34787BB621E275E700BC1F48 /* ParticipantTableViewCell.xib */; };
 		34787BB921E275E700BC1F48 /* ParticipantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34787BB721E275E700BC1F48 /* ParticipantTableViewCell.swift */; };
-		34787BBD21E2989400BC1F48 /* UpdateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34787BBB21E2989400BC1F48 /* UpdateViewController.xib */; };
-		34787BBE21E2989400BC1F48 /* UpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34787BBC21E2989400BC1F48 /* UpdateViewController.swift */; };
+		34787BBD21E2989400BC1F48 /* UpdateParticipantViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34787BBB21E2989400BC1F48 /* UpdateParticipantViewController.xib */; };
+		34787BBE21E2989400BC1F48 /* UpdateParticipantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34787BBC21E2989400BC1F48 /* UpdateParticipantViewController.swift */; };
 		7C31FC8FB3F32529D15D2534 /* Pods_CenaNavidadUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7489ACA31BA390D4F438EF95 /* Pods_CenaNavidadUITests.framework */; };
 		B36FB11865A2DA66189DF211 /* Pods_CenaNavidad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F03258A4E14B628B6810C26 /* Pods_CenaNavidad.framework */; };
 		C807E381D3D3B5BF8D44DD6C /* Pods_CenaNavidadTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 537B4E5DDBA0ABF211AD3FC4 /* Pods_CenaNavidadTests.framework */; };
@@ -54,23 +52,19 @@
 		34787B7321E260DB00BC1F48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		34787B7521E260DB00BC1F48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34787B7A21E260DB00BC1F48 /* CenaNavidadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CenaNavidadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		34787B7E21E260DB00BC1F48 /* CenaNavidadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenaNavidadTests.swift; sourceTree = "<group>"; };
-		34787B8021E260DB00BC1F48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34787B8521E260DB00BC1F48 /* CenaNavidadUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CenaNavidadUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		34787B8921E260DB00BC1F48 /* CenaNavidadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenaNavidadUITests.swift; sourceTree = "<group>"; };
-		34787B8B21E260DB00BC1F48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34787B9921E261C300BC1F48 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		34787B9A21E261C300BC1F48 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		34787BA221E268F900BC1F48 /* ParticipantEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantEntity.swift; sourceTree = "<group>"; };
 		34787BA521E2696A00BC1F48 /* Participant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Participant.swift; sourceTree = "<group>"; };
 		34787BA821E26B8D00BC1F48 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		34787BAE21E26CD300BC1F48 /* LocalParticipantRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalParticipantRepository.swift; sourceTree = "<group>"; };
-		34787BB121E2712500BC1F48 /* AddViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddViewController.xib; sourceTree = "<group>"; };
-		34787BB221E2712500BC1F48 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		34787BB121E2712500BC1F48 /* AddParticipantViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddParticipantViewController.xib; sourceTree = "<group>"; };
+		34787BB221E2712500BC1F48 /* AddParticipantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddParticipantViewController.swift; sourceTree = "<group>"; };
 		34787BB621E275E700BC1F48 /* ParticipantTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParticipantTableViewCell.xib; sourceTree = "<group>"; };
 		34787BB721E275E700BC1F48 /* ParticipantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantTableViewCell.swift; sourceTree = "<group>"; };
-		34787BBB21E2989400BC1F48 /* UpdateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateViewController.xib; sourceTree = "<group>"; };
-		34787BBC21E2989400BC1F48 /* UpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateViewController.swift; sourceTree = "<group>"; };
+		34787BBB21E2989400BC1F48 /* UpdateParticipantViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateParticipantViewController.xib; sourceTree = "<group>"; };
+		34787BBC21E2989400BC1F48 /* UpdateParticipantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateParticipantViewController.swift; sourceTree = "<group>"; };
 		537B4E5DDBA0ABF211AD3FC4 /* Pods_CenaNavidadTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CenaNavidadTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57BF2314D8EF2DCDAC1837CB /* Pods-CenaNavidadUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CenaNavidadUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CenaNavidadUITests/Pods-CenaNavidadUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7489ACA31BA390D4F438EF95 /* Pods_CenaNavidadUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CenaNavidadUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,8 +107,6 @@
 			isa = PBXGroup;
 			children = (
 				34787B6821E260DA00BC1F48 /* CenaNavidad */,
-				34787B7D21E260DB00BC1F48 /* CenaNavidadTests */,
-				34787B8821E260DB00BC1F48 /* CenaNavidadUITests */,
 				34787B6721E260DA00BC1F48 /* Products */,
 				C10A5A1855685113FBC3C384 /* Pods */,
 				CA69AB2F55589D2EBA54FFB6 /* Frameworks */,
@@ -145,24 +137,6 @@
 				34787B7521E260DB00BC1F48 /* Info.plist */,
 			);
 			path = CenaNavidad;
-			sourceTree = "<group>";
-		};
-		34787B7D21E260DB00BC1F48 /* CenaNavidadTests */ = {
-			isa = PBXGroup;
-			children = (
-				34787B7E21E260DB00BC1F48 /* CenaNavidadTests.swift */,
-				34787B8021E260DB00BC1F48 /* Info.plist */,
-			);
-			path = CenaNavidadTests;
-			sourceTree = "<group>";
-		};
-		34787B8821E260DB00BC1F48 /* CenaNavidadUITests */ = {
-			isa = PBXGroup;
-			children = (
-				34787B8921E260DB00BC1F48 /* CenaNavidadUITests.swift */,
-				34787B8B21E260DB00BC1F48 /* Info.plist */,
-			);
-			path = CenaNavidadUITests;
 			sourceTree = "<group>";
 		};
 		34787B9721E2617700BC1F48 /* ViewControllers */ = {
@@ -212,8 +186,8 @@
 		34787BB021E270FC00BC1F48 /* AddViewController */ = {
 			isa = PBXGroup;
 			children = (
-				34787BB121E2712500BC1F48 /* AddViewController.xib */,
-				34787BB221E2712500BC1F48 /* AddViewController.swift */,
+				34787BB121E2712500BC1F48 /* AddParticipantViewController.xib */,
+				34787BB221E2712500BC1F48 /* AddParticipantViewController.swift */,
 			);
 			path = AddViewController;
 			sourceTree = "<group>";
@@ -230,8 +204,8 @@
 		34787BBA21E2986E00BC1F48 /* UpdateViewController */ = {
 			isa = PBXGroup;
 			children = (
-				34787BBB21E2989400BC1F48 /* UpdateViewController.xib */,
-				34787BBC21E2989400BC1F48 /* UpdateViewController.swift */,
+				34787BBB21E2989400BC1F48 /* UpdateParticipantViewController.xib */,
+				34787BBC21E2989400BC1F48 /* UpdateParticipantViewController.swift */,
 			);
 			path = UpdateViewController;
 			sourceTree = "<group>";
@@ -370,9 +344,9 @@
 				34787B7421E260DB00BC1F48 /* LaunchScreen.storyboard in Resources */,
 				34787BB821E275E700BC1F48 /* ParticipantTableViewCell.xib in Resources */,
 				34787B9B21E261C300BC1F48 /* MainViewController.xib in Resources */,
-				34787BB321E2712500BC1F48 /* AddViewController.xib in Resources */,
+				34787BB321E2712500BC1F48 /* AddParticipantViewController.xib in Resources */,
 				34787B7121E260DB00BC1F48 /* Assets.xcassets in Resources */,
-				34787BBD21E2989400BC1F48 /* UpdateViewController.xib in Resources */,
+				34787BBD21E2989400BC1F48 /* UpdateParticipantViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,8 +450,8 @@
 			files = (
 				34787BAF21E26CD300BC1F48 /* LocalParticipantRepository.swift in Sources */,
 				34787BA621E2696A00BC1F48 /* Participant.swift in Sources */,
-				34787BBE21E2989400BC1F48 /* UpdateViewController.swift in Sources */,
-				34787BB421E2712500BC1F48 /* AddViewController.swift in Sources */,
+				34787BBE21E2989400BC1F48 /* UpdateParticipantViewController.swift in Sources */,
+				34787BB421E2712500BC1F48 /* AddParticipantViewController.swift in Sources */,
 				34787BB921E275E700BC1F48 /* ParticipantTableViewCell.swift in Sources */,
 				34787B6A21E260DA00BC1F48 /* AppDelegate.swift in Sources */,
 				34787BA921E26B8D00BC1F48 /* Repository.swift in Sources */,
@@ -490,7 +464,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34787B7F21E260DB00BC1F48 /* CenaNavidadTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,7 +471,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34787B8A21E260DB00BC1F48 /* CenaNavidadUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

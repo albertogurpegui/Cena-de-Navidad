@@ -8,19 +8,19 @@
 
 import UIKit
 
-protocol UpdateViewControllerDelegate: class {
-    func updateViewController(_ vc: UpdateViewController, didEditParticipant participant: Participant)
-    func errorUpdateViewController(_ vc:UpdateViewController)
+protocol UpdateParticipantViewControllerDelegate: class {
+    func updateParticipantViewController(_ vc: UpdateParticipantViewController, didEditParticipant participant: Participant)
+    func errorUpdateParticipantViewController(_ vc:UpdateParticipantViewController)
 }
 
-class UpdateViewController: UIViewController {
+class UpdateParticipantViewController: UIViewController {
     
     @IBOutlet weak var viewpop: UIView!
     @IBOutlet weak var id: UILabel!
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var paid: UISwitch!
     internal var repository: LocalParticipantRepository!
-    weak var delegate: UpdateViewControllerDelegate?
+    weak var delegate: UpdateParticipantViewControllerDelegate?
     var participant = Participant()
     
     convenience init(participant: Participant){
@@ -50,9 +50,8 @@ class UpdateViewController: UIViewController {
     }
     
     @IBAction func updateButtonRessed() {
-        if (repository.get(name: name.text!) != nil) ||
-            (name.text?.elementsEqual(""))! {
-            self.delegate?.errorUpdateViewController(self)
+        if (repository.get(name: participant.name)?.name != name.text) || (repository.get(identifier: participant.id)?.id != id.text) || (name.text?.elementsEqual(""))! {
+            self.delegate?.errorUpdateParticipantViewController(self)
         }else{
             participant.id = id.text!
             participant.name = name.text!
@@ -62,7 +61,7 @@ class UpdateViewController: UIViewController {
                 self.view.backgroundColor = UIColor.clear
             }) { (bool) in
                 if self.repository.update(a: self.participant){
-                    self.delegate?.updateViewController(self, didEditParticipant: self.participant)
+                    self.delegate?.updateParticipantViewController(self, didEditParticipant: self.participant)
                 }
             }
         }
