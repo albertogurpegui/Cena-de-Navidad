@@ -11,6 +11,10 @@ import RealmSwift
 
 class LocalDishRepository: Repository {
     
+    func getCount(name: String) -> Int? {
+        return 0
+    }
+    
     func getAll() -> [Dish] {
         var dishes: [Dish] = []
         do {

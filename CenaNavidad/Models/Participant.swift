@@ -13,4 +13,5 @@ class Participant {
     var name:String!
     var paid = false
     var creationDate:Date!
+    var dishes:[Dish] = []
 }

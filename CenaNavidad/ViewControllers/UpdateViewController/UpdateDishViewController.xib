@@ -12,6 +12,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UpdateDishViewController" customModule="CenaNavidad" customModuleProvider="target">
             <connections>
+                <outlet property="id" destination="79y-gj-LJf" id="b4J-f6-lbQ"/>
+                <outlet property="name" destination="cCh-dt-bYd" id="h1l-nG-ZjL"/>
+                <outlet property="view" destination="iN0-l3-epB" id="zrG-N4-KyU"/>
                 <outlet property="viewpop" destination="aUN-1C-sFB" id="PWt-4W-Fph"/>
             </connections>
         </placeholder>

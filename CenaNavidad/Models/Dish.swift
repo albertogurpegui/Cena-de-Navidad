@@ -11,5 +11,4 @@ import UIKit
 class Dish {
     var id:String!
     var name:String!
-    var participants:[Participant] = []
 }

@@ -48,7 +48,7 @@ class UpdateDishViewController: UIViewController {
     }
     
     @IBAction func updateButtonRessed() {
-        if (repository.get(name: dish.name)?.name != name.text) || (repository.get(identifier: dish.id)?.id != id.text) || (name.text?.elementsEqual(""))! {
+        if (repository.getCount(name: name.text!)! > 1) || (repository.get(identifier: dish.id)?.name != name.text!) || (name.text?.elementsEqual(""))! {
             self.delegate?.errorUpdateDishViewController(self)
         }else{
             dish.id = id.text!

@@ -13,7 +13,6 @@ class DishEntity: Object {
     
     @objc dynamic var id = ""
     @objc dynamic var name = ""
-    var participants: [Participant] = []
     
     
     override static func primaryKey() -> String?{
@@ -24,14 +23,12 @@ class DishEntity: Object {
         self.init()
         self.id = dish.id
         self.name = dish.name
-        self.participants = dish.participants
     }
     
     func dishModel() -> Dish {
         let model = Dish()
         model.id = id
         model.name = name
-        model.participants = participants
         return model
     }
     

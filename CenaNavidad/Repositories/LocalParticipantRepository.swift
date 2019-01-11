@@ -54,6 +54,31 @@ class LocalParticipantRepository: Repository {
         return nil
     }
     
+    func get(isPaid: Bool) -> Participant? {
+        do{
+            let realm = try Realm()
+            if let entity = realm.objects(ParticipantEntity.self).filter("isPaid == %@", true).first{
+                let model = entity.participantModel()
+                return model
+            }
+        }
+        catch {
+            return nil
+        }
+        return nil
+    }
+    
+    func getCount(name: String) -> Int? {
+        do{
+            let realm = try Realm()
+            return realm.objects(ParticipantEntity.self).filter("name == %@", name).count
+        }
+        catch {
+            return nil
+        }
+        return nil
+    }
+    
     func create(a: Participant) -> Bool {
         do{
             let realm = try Realm()

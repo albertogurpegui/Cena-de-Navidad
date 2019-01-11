@@ -10,14 +10,22 @@ import UIKit
 import RealmSwift
 
 class DishesViewController: UIViewController {
-
+    
     @IBOutlet weak var tableView:UITableView!
     internal  var repository:LocalDishRepository!
     internal var dishes: [Dish] = []
     internal var filteredDishes: [Dish] = []
-    let searchController = UISearchController(searchResultsController: nil)
     let realm = try! Realm()
     var dish:Dish?
+    
+    init(){
+        super.init(nibName: "DishesViewController", bundle: nil)
+        self.title = NSLocalizedString("PLATOS", comment: "")
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -27,14 +35,12 @@ class DishesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "PLATOS"
         registerCell()
         
         repository = LocalDishRepository()
         dishes = repository.getAll()
         
         createButtonAdd()
-        configSearchBar()
     }
     
     internal func registerCell(){
@@ -54,22 +60,6 @@ class DishesViewController: UIViewController {
         addVC.modalTransitionStyle = .coverVertical
         addVC.modalPresentationStyle = .overCurrentContext
         present(addVC,animated: true,completion: nil)
-    }
-    
-    internal func configSearchBar(){
-        searchController.searchResultsUpdater = self
-        searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Buscar..."
-        searchController.searchBar.backgroundColor = UIColor.white
-        navigationItem.searchController = searchController
-    }
-    
-    internal func searchBarIsEmpty() -> Bool{
-        return searchController.searchBar.text?.isEmpty ?? true
-    }
-    
-    internal func isFiltering() -> Bool{
-        return searchController.isActive && !searchBarIsEmpty()
     }
     
     internal func filterContentForSearchText(_ searchText: String){
@@ -95,22 +85,13 @@ extension DishesViewController: UITableViewDelegate ,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if isFiltering(){
-            return filteredDishes.count
-        }else{
-            return dishes.count
-        }
+        return dishes.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:DishTableViewCell = tableView.dequeueReusableCell(withIdentifier: "DishTableViewCell", for: indexPath) as! DishTableViewCell
-        if isFiltering(){
-            let dish = filteredDishes[indexPath.row]
-            cell.nameDish.text = dish.name
-        }else{
-            let dish = filteredDishes[indexPath.row]
-            cell.nameDish.text = dish.name
-        }
+        let dish = dishes[indexPath.row]
+        cell.nameDish.text = dish.name
         
         return cell
     }
@@ -121,43 +102,22 @@ extension DishesViewController: UITableViewDelegate ,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        if isFiltering(){
-            let dish = filteredDishes[indexPath.row]
-            let updateVC = UpdateDishViewController(dish: dish)
-            updateVC.delegate = self
-            updateVC.modalTransitionStyle = .coverVertical
-            updateVC.modalPresentationStyle = .overCurrentContext
-            searchController.dismiss(animated: true, completion: nil)
-            present(updateVC, animated: true, completion: nil)
-        }else{
             let dish = dishes[indexPath.row]
             let updateVC = UpdateDishViewController(dish: dish)
             updateVC.delegate = self
             updateVC.modalTransitionStyle = .coverVertical
             updateVC.modalPresentationStyle = .overCurrentContext
-            searchController.dismiss(animated: true, completion: nil)
             present(updateVC, animated: true, completion: nil)
-        }
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete{
-            if isFiltering(){
-                let dish = filteredDishes[indexPath.row]
-                if repository.delete(a: dish){
-                    dishes.remove(at: indexPath.row)
-                    tableView.beginUpdates()
-                    tableView.deleteRows(at: [indexPath], with: .automatic)
-                    tableView.endUpdates()
-                }
-            }else{
-                let dish = dishes[indexPath.row]
-                if repository.delete(a: dish){
-                    dishes.remove(at: indexPath.row)
-                    tableView.beginUpdates()
-                    tableView.deleteRows(at: [indexPath], with: .automatic)
-                    tableView.endUpdates()
-                }
+            let dish = dishes[indexPath.row]
+            if repository.delete(a: dish){
+                dishes.remove(at: indexPath.row)
+                tableView.beginUpdates()
+                tableView.deleteRows(at: [indexPath], with: .automatic)
+                tableView.endUpdates()
             }
         }
     }

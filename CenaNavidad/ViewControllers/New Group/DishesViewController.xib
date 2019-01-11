@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DishesViewController" customModule="CenaNavidad" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="GRQ-KJ-DMq" id="MMx-9R-0EG"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

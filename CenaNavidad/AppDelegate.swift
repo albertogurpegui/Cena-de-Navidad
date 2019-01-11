@@ -17,11 +17,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         if let window = window{
-            let mainVC = DishesViewController()
+            let mainVC = MainViewController()
             let navigetionController = UINavigationController(rootViewController: mainVC)
             window.rootViewController = navigetionController
             window.makeKeyAndVisible()
             
+            /*window.tintColor = UIColor.black
+            UINavigationBar.appearance().barTintColor = UIColor.white
+            UITabBar.appearance().barTintColor = UIColor.white
+            let mainVC = MainViewController()
+            let dishVC = DishesViewController()
+            let mainNavigationController = UINavigationController(rootViewController: mainVC)
+            mainNavigationController.navigationBar.prefersLargeTitles = true
+            mainNavigationController.navigationBar.isTranslucent = false
+            let dishNavigationController = UINavigationController(rootViewController: dishVC)
+            dishNavigationController.navigationBar.prefersLargeTitles = true
+            dishNavigationController.navigationBar.isTranslucent = false
+            let tabBarController = UITabBarController()
+            tabBarController.tabBar.isTranslucent = false
+            tabBarController.viewControllers = [mainVC,dishVC]
+            window.rootViewController = tabBarController
+            window.makeKeyAndVisible()*/
         }
         return true
     }

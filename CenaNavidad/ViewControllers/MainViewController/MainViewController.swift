@@ -19,20 +19,30 @@ class MainViewController: UIViewController {
     let realm = try! Realm()
     var participant:Participant?
     
+    init(){
+        super.init(nibName: "MainViewController", bundle: nil)
+        self.title = NSLocalizedString("PARTICIPANTES", comment: "")
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         participants = repository.getAll()
+        
         tableView.reloadData()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "PARTICIPANTES"
         registerCell()
 
         repository = LocalParticipantRepository()
         participants = repository.getAll()
-
+        print("lol")
+        createButtonDish()
         createButtonAdd()
         configSearchBar()
     }
@@ -47,6 +57,10 @@ class MainViewController: UIViewController {
         let addButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addPressed))
         navigationItem.rightBarButtonItem = addButtonItem
     }
+    internal func createButtonDish(){
+        let dishButtonItem = UIBarButtonItem(title: "Dishes", style: .plain, target: self, action: #selector(dishPressed))
+        navigationItem.setLeftBarButton(dishButtonItem, animated: false)
+    }
     
     @objc internal func addPressed (){
         let addVC = AddParticipantViewController()
@@ -56,10 +70,18 @@ class MainViewController: UIViewController {
         present(addVC,animated: true,completion: nil)
     }
     
+    @objc internal func dishPressed (){
+        let dishVC = DishesViewController()
+        dishVC.modalTransitionStyle = .coverVertical
+        dishVC.modalPresentationStyle = .overCurrentContext
+        navigationController?.pushViewController(dishVC, animated: true)
+        //present(dishVC,animated: true,completion: nil)
+    }
+    
     internal func configSearchBar(){
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Buscar..."
+        searchController.searchBar.placeholder = "Escribe 'Moroso' o Busca Nombre..."
         searchController.searchBar.backgroundColor = UIColor.white
         navigationItem.searchController = searchController
     }
@@ -73,10 +95,17 @@ class MainViewController: UIViewController {
     }
     
     internal func filterContentForSearchText(_ searchText: String){
-        filteredParticipants = participants.filter({ (nParticipants: Participant ) -> Bool in
-            return (nParticipants.name.lowercased().contains(searchText.lowercased()))
-        })
-        tableView.reloadData()
+        if !searchText.elementsEqual("Moroso"){
+            filteredParticipants = participants.filter({ (nParticipants: Participant ) -> Bool in
+                return (nParticipants.name.lowercased().contains(searchText.lowercased()))
+            })
+            tableView.reloadData()
+        }else{
+            filteredParticipants = participants.filter({ (nParticipants: Participant ) -> Bool in
+                return !(nParticipants.paid)
+            })
+            tableView.reloadData()
+        }
     }
 
     override func didReceiveMemoryWarning() {

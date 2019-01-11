@@ -15,6 +15,7 @@ class ParticipantEntity: Object {
     @objc dynamic var name = ""
     @objc dynamic var paid = false
     @objc dynamic var creationDate = Date()
+    var dishes:[Dish] = []
     
     
     override static func primaryKey() -> String?{
@@ -27,6 +28,7 @@ class ParticipantEntity: Object {
         self.name = participant.name
         self.paid = participant.paid
         self.creationDate = participant.creationDate
+        self.dishes = participant.dishes
     }
     
     func participantModel() -> Participant {
@@ -35,6 +37,7 @@ class ParticipantEntity: Object {
         model.name = name
         model.paid = paid
         model.creationDate = creationDate
+        model.dishes = dishes
         return model
     }
 
