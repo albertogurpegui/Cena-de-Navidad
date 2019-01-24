@@ -66,7 +66,7 @@ class UpdateParticipantViewController: UIViewController {
     }
     
     @IBAction func updateButtonRessed() {
-        //Me ayudo Pablo Cruz con esto se lo agradezco mucho <3
+        //Me ayudo Pablo Cruz con esto se lo agradezco mucho <3Repositories
         if (repository.getCount(name: name.text!)! > 1) || (repository.get(identifier: participant.id)?.name != name.text!) || (name.text?.elementsEqual(""))!{
             self.delegate?.errorUpdateParticipantViewController(self)
         }else{

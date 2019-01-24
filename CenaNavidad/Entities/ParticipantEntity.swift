@@ -6,7 +6,7 @@
 //  Copyright © 2019 Alberto gurpegui. All rights reserved.
 //
 
-import UIKit
+import Foundation
 import RealmSwift
 
 class ParticipantEntity: Object {
