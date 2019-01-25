@@ -56,6 +56,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		19869B220A761CEF3C5A4E32 /* Pods-CenaNavidadTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CenaNavidadTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CenaNavidadTests/Pods-CenaNavidadTests.debug.xcconfig"; sourceTree = "<group>"; };
+		227AB69832D0A348D3A3BD55 /* Pods-CenaNavidadUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CenaNavidadUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CenaNavidadUITests/Pods-CenaNavidadUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2C6A44741CEDF9555A22AA87 /* Pods-CenaNavidad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CenaNavidad.release.xcconfig"; path = "Pods/Target Support Files/Pods-CenaNavidad/Pods-CenaNavidad.release.xcconfig"; sourceTree = "<group>"; };
 		34787B6621E260DA00BC1F48 /* CenaNavidad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CenaNavidad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34787B6921E260DA00BC1F48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +93,8 @@
 		7489ACA31BA390D4F438EF95 /* Pods_CenaNavidadUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CenaNavidadUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		791CA64B00D0F5D97834CBE1 /* Pods-CenaNavidad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CenaNavidad.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CenaNavidad/Pods-CenaNavidad.debug.xcconfig"; sourceTree = "<group>"; };
 		7F03258A4E14B628B6810C26 /* Pods_CenaNavidad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CenaNavidad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F55DEFEC84AF6551235D17E /* Pods-CenaNavidadUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CenaNavidadUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CenaNavidadUITests/Pods-CenaNavidadUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A7C20BEBEE5BD3FA336A3DF8 /* Pods-CenaNavidadTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CenaNavidadTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CenaNavidadTests/Pods-CenaNavidadTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,6 +257,10 @@
 			children = (
 				791CA64B00D0F5D97834CBE1 /* Pods-CenaNavidad.debug.xcconfig */,
 				2C6A44741CEDF9555A22AA87 /* Pods-CenaNavidad.release.xcconfig */,
+				19869B220A761CEF3C5A4E32 /* Pods-CenaNavidadTests.debug.xcconfig */,
+				A7C20BEBEE5BD3FA336A3DF8 /* Pods-CenaNavidadTests.release.xcconfig */,
+				8F55DEFEC84AF6551235D17E /* Pods-CenaNavidadUITests.debug.xcconfig */,
+				227AB69832D0A348D3A3BD55 /* Pods-CenaNavidadUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -700,6 +708,7 @@
 		};
 		34787B9221E260DB00BC1F48 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19869B220A761CEF3C5A4E32 /* Pods-CenaNavidadTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -721,6 +730,7 @@
 		};
 		34787B9321E260DB00BC1F48 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7C20BEBEE5BD3FA336A3DF8 /* Pods-CenaNavidadTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -742,6 +752,7 @@
 		};
 		34787B9521E260DB00BC1F48 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F55DEFEC84AF6551235D17E /* Pods-CenaNavidadUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -762,6 +773,7 @@
 		};
 		34787B9621E260DB00BC1F48 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 227AB69832D0A348D3A3BD55 /* Pods-CenaNavidadUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
